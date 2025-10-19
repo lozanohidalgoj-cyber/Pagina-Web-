@@ -3,90 +3,76 @@ img {
   display: block;
   margin: 50px auto;
 }
-
+/* Reset de body */
 body {
+  margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
   color: #333;
-  padding: 20px;
 }
 
-
+/* Header */
 header {
   display: flex;
   justify-content: space-between; /* h1 a la izquierda, lista a la derecha */
-  align-items: center;            /* centra verticalmente los elementos */
+  align-items: center;
   padding: 10px 40px;
   background-color: #ffffff;
   border-bottom: 2px solid #00539f;
 }
 
-
-
+/* Títulos */
 h2 {
-  color: #00539f;
+  color: #f3f6f9;
   margin-bottom: 15px;
-  text-align: center; /* 👉 centra el texto horizontalmente */
+  text-align: center;
 }
 
-/* 🔹 Lista horizontal con letras */
+/* Lista horizontal limpia */
 .lista-horizontal {
-  list-style-type: none;
+  list-style: none;
   display: flex;
   gap: 30px;
-  padding: 15px;
-  border: 2px solid #00539f;
-  border-radius: 10px;
-  background-color: #ffffff;
-  width: 80%;
-  margin: 20px auto;
+  padding: 0;
+  margin: 0 auto 10px;
+  background: none;
+  border: none;
 }
 
 .lista-horizontal li {
   font-size: 18px;
-  color: #00539f;
+  color: #da702e;
   font-weight: bold;
   transition: 0.3s;
 }
 
 .lista-horizontal li:hover {
-  background-color: #e0e7ff;
+  background: none;
   cursor: pointer;
-  border-radius: 5px;
 }
 
-
-.lista-horizontal {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0 0 10px 0; /* margen inferior de 10px */
-  gap: 15px; /* espacio entre los elementos de la lista */
-}
-
-
-/* 🔹 Recuadro con texto e imagen */
-.recuadro {
-  display: flex;               /* Coloca texto e imagen en la misma línea */
-  align-items: center;         /* Centra verticalmente */
-  justify-content: space-between;
-  background-color: #eb8acf;
-  border: 2px solid #f8f8f8;
+/* Banner que reemplaza el recuadro */
+.banner {
+  position: relative;          /* permite posicionar el texto sobre la imagen */
+  width: 100%;
+  max-height: 300px;           /* altura similar al recuadro anterior */
+  overflow: hidden;
+  margin: 40px 0;
   border-radius: 15px;
-  padding: 20px;
-  margin: 40px auto;
-  width: 90%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.texto {
-  text-align: right;   /* Mueve el texto hacia la derecha */
-  color: #ffffff;
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-
-.texto {
-  flex: 1;
-  color: #ffffff;
-  text-align: center;
-}
+/* Texto superpuesto sobre el banner */
+.texto-banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50

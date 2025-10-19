@@ -10,41 +10,53 @@
 <body>
 
 
-    <ol class="lista-horizontal">
-    <li>Estudios</li>
-    <li>Experiencia</li>
-    <li>Datos básicos</li>
-    <li>Hobbies</li>
-    <li>Metas</li>
-    <li>Redes sociales</li>
-  </ol>
+   <style>
+  .contenedor-listas {
+    display: flex;
+    flex-direction: column;   /* listas apiladas verticalmente */
+    align-items: center;      /* centrado horizontal */
+    gap: 10px;                /* espacio entre listas */
+    margin: 20px auto;        /* centra las listas en la pantalla */
+  }
 
+  .lista-horizontal {
+    display: flex;
+    list-style: none;         /* quita numeración */
+    padding: 0;
+    margin: 0;
+    justify-content: center;  /* centra los items horizontalmente */
+    gap: 20px;
+  }
+</style>
 
-
-<ol class="lista-horizontal">
-    <li>instituciones</li>
-    <li>trabajos</li>
-    <li>conocimientos</li>
+<div class="contenedor-listas">
+  <ol class="lista-horizontal">
+    <li>graduados</li>
+    <li>estuiantes </li>
+    <li>reingresos/li>
     <li>sena</li>
-    <li>ucompensar</li>
-    <li>Redes sociales</li>
+    <li>aplicativos</li>
+    <li>Emisora</li>
   </ol>
+
+  <ol class="lista-horizontal">
+    <li>Tecnico</li>
+    <li>Tecnologo</li>
+    <li>Profesional</li>
+    
+  </ol>
+</div>
+
 
 
 
 
 <main>
-    <div class="recuadro">
-      <img src="Captura de pantalla 2025-10-19 .png" alt="Imagen de ejemplo">
-      <div class="texto">
-        <h2>Bienvendo a mi pagina Web </h2>
-        <p>
-         Tengo 28 años  nacie el 17 de junio de 1996, soy de Colombia, me gusta mucho la musica, bailar, cantar, leer y ver peliculas.
+  <div class="banner">
+    <img src="ingsistemas.png" alt="Banner principal">
+  </div>
+</main>
 
-        </p>
-      </div>
-    </div>
-  </main>
 
 
   <script src="scripts/main.js"></script>
@@ -55,7 +67,7 @@
   <br>
   <hr>
 
-  <p>Hidalgo</p>
+  <p>ingenieria de sistemas</p>
 
   <p id="demo">javascript</p>
 
