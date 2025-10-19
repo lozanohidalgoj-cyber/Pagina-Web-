@@ -180,13 +180,24 @@ img {
 }
 /*contenerdor de imagen y texto*/
 .fila-imagen-texto {
-.fila-imagen-texto {
-  display: flex;               
-  align-items: center;         
-  justify-content: center;     
-  gap: 5px;        /* reducido de 20px a 5px para acercar el párrafo a la imagen */
-  margin: 20px 0;              
+  display: flex;
+  justify-content: center;   /* centra todo el bloque */
+  align-items: center;
+  gap: 10px;
 }
+.fila-imagen-texto p {
+  text-align: left;          /* opcional, si quieres que el texto quede alineado a la izquierda dentro del bloque */
+  max-width: 400px;          /* limita el ancho del párrafo */
+}
+.texto-derecha {
+  text-align: left;       /* el texto dentro del párrafo se alinea a la izquierda */
+  margin: 0 auto;         /* centra el párrafo como bloque horizontalmente */
+  max-width: 600px;       /* opcional: limita el ancho para que no se extienda demasiado */
+  font-size: 20px;        /* aumenta el tamaño de letra */
+  color: #333;            /* color del texto */
+  line-height: 1.5;       /* separación entre líneas para mejor lectura */
+}
+
 
 .imagenrepresentate {
   width: 150px;                
