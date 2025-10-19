@@ -1,0 +1,29 @@
+
+
+img {
+  display: block;
+  margin: 50px auto;
+}
+
+body {
+  background-color: #FF3399;
+}
+
+h1 {
+  margin: 0;
+  padding: 20px 0;
+  color: #FFFF00;
+  text-shadow: 4px 4px 1px #FAFAFA;
+}
+
+h2 {color :aqua; text-shadow: 2px 2px 1px #FAFAFA;}
+
+hr {
+  border-style: none;
+  border-top-style:dotted;
+  border-color: #53f65c;
+  border-width: 6px;
+  width: 20%;
+  margin: 20px auto;
+}
+ 
