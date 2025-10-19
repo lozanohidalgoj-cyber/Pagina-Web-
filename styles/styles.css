@@ -19,17 +19,25 @@ header {
 
 /* Títulos */
 h2 {
-  color: #f3f6f9;
-  margin-bottom: 15px;
-  text-align: center;
+  text-align: center;  /* centra horizontalmente */
+  font-size: 32px;     /* tamaño grande */
+  color: #ce318f;      /* color opcional */
+  margin: 20px 0;      /* espacio arriba y abajo */
 }
 
 
-/* centrar contenedor de listas */
-.contenedor-listas {/* 1. Define un ancho para que el margen automático funcione */
-    width: 80%;  /* O el valor que necesites, por ejemplo: 500px */
-    margin: 0 auto;
+
+.contenedor-listas {
+  max-width: 800px;
+  width: 90%;
+  margin: 40px auto 0 auto; /* 40px espacio arriba, centrado horizontalmente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
+
+
 
 /* Lista horizontal limpia */
 .lista-horizontal {
@@ -86,10 +94,115 @@ h2 {
   background-color: #e0e7ff;
 }
 
+
+
+
 /* Banner de imagen */
 img {
   display: block;
   width: 100%;
   height: auto;
   margin: 40px 0;
+}
+
+
+.mi-parrafo {
+  text-align: center;     /* centra el texto */
+  color: #007acc;         /* color de la letra */
+  font-size: 24px;        /* tamaño de letra más grande */
+  line-height: 1.6;       /* espacio entre líneas para mejorar la lectura */
+  font-weight: 500;       /* opcional: grosor de la letra */
+  max-width: 800px;       /* opcional: ancho máximo del párrafo */
+  margin: 20px auto;      /* centra el bloque en la página */
+}
+
+
+
+.formulario-contacto {
+  max-width: 500px;          /* ancho máximo del formulario */
+  margin: 20px auto;         /* centra el formulario */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;                 /* espacio entre campos */
+}
+
+.formulario-contacto label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.formulario-contacto input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;    /* asegura que el padding no aumente el ancho */
+}
+
+.formulario-contacto button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.formulario-contacto button:hover {
+  background-color: #00539f;
+}
+.imagenrepresentate {
+  display: block;       /* hace que la imagen sea un bloque, necesario para centrar */
+  margin: 20px auto;    /* centra horizontalmente y agrega espacio arriba y abajo */
+  width: 200px;         /* ancho de la imagen, ajusta según quieras */
+  height: auto;         /* mantiene la proporción original */
+  border-radius: 10px;  /* opcional: bordes redondeados */
+}
+
+/*centralizar el texto antes de la imagen*/
+.centro {
+  display: flex;
+  flex-direction: column;      /* apila los párrafos verticalmente */
+  justify-content: center;     /* centra verticalmente */
+  align-items: center;         /* centra horizontalmente */
+  height: 50vh;                /* altura del contenedor: 50% de la pantalla */
+  text-align: center;          /* centra el texto */
+  gap: 5px;                    /* espacio entre los párrafos */
+}
+
+.centro p {
+  font-weight: bold;   /* pone todo el texto en negrita */
+  text-align: center;  /* centra horizontalmente */
+  font-size: 20px;     /* opcional: tamaño de letra */
+}
+/*contenerdor de imagen y texto*/
+.fila-imagen-texto {
+.fila-imagen-texto {
+  display: flex;               
+  align-items: center;         
+  justify-content: center;     
+  gap: 5px;        /* reducido de 20px a 5px para acercar el párrafo a la imagen */
+  margin: 20px 0;              
+}
+
+.imagenrepresentate {
+  width: 150px;                
+  height: auto;                
+}
+
+.texto-derecha {
+  font-size: 20px;             
+  font-weight: bold;           
+  text-align: center;          
+}
+
+.informacion {
+  font-size: 18px;       /* mismo tamaño de letra para todos */
+  margin-left: 20px;     /* espacio desde el margen izquierdo */
+  margin-bottom: 5px;    /* espacio entre líneas */
+  font-weight: normal;   /* opcional: quitar negrita si no quieres */
+  color: #333;           /* color del texto */
 }

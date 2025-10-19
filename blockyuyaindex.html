@@ -56,21 +56,47 @@
 </main>
 
 <!-- Contenido de la página -->
-<h2>Página web</h2>
+<h2>ingenieria de sistemas </h2>
 <hr>
 
-<p>Ingeniería de Sistemas</p>
+<p class="mi-parrafo">
+  La ingeniería de sistemas se enfoca en el diseño, desarrollo, implementación y mantenimiento de sistemas complejos, especialmente los informáticos, para resolver problemas y mejorar procesos
+</p>
 
-<p id="demo">JavaScript</p>
 
-<button onclick="document.getElementById('demo').innerHTML = 'Esto se cambió con JavaScript';">
-  Clickea aquí
-</button>
+<form class="formulario-contacto">
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
 
-<img src="Captura de pantalla 2025-10-16 212907.png" alt="Foto mía">
+  <label for="telefono">Teléfono:</label>
+  <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su teléfono" required>
 
-<p>Me siento muy ... <br> FELIZ</p>
-<p>- Todo lo puedes</p>
+  <label for="email">Correo electrónico:</label>
+  <input type="email" id="email" name="email" placeholder="Ingrese su correo" required>
+
+  <label for="numero">Número:</label>
+  <input type="number" id="numero" name="numero" placeholder="Ingrese un número" required>
+
+  <button type="submit">Enviar</button>
+</form>
+
+<div class="centro">
+  <p>Estudiante <br>del programa</p>
+  <p>Jullieth Lozano Hidalgo</p>
+</div>
+
+
+<img src="yuya.png" alt="Captura de pantalla" class="imagenrepresentate">
+
+<div class="fila-imagen-texto">
+  <img src="ucompensar.png" alt="ucompensar" class="imagenrepresentate">
+  <p class="texto-derecha">Profundización</p>
+</div>
+
+<h4 class="informacion">Materia: Diseño y desarrollo web</h4>
+<h5 class="informacion">Estudiante: Jullieth Lozano Hidalgo</h5>
+<h6 class="informacion">Instructor: Cristian Alejandro Amaya Fernandez</h6>
+
 
 <a href="https://www.facebook.com/jullieth.lozanohidalgo/">
   https://www.facebook.com/jullieth.lozanohidalgo/
@@ -107,6 +133,9 @@
       if(submenu) submenu.style.display = 'none';
     });
   });
+
+
+
 </script>
 
 </body>
