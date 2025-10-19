@@ -6,82 +6,108 @@
   <title>Lista horizontal con letras</title>
   <link rel="stylesheet" href="styles/styles.css">
 </head>
-
 <body>
 
-
-   <style>
-  .contenedor-listas {
-    display: flex;
-    flex-direction: column;   /* listas apiladas verticalmente */
-    align-items: center;      /* centrado horizontal */
-    gap: 10px;                /* espacio entre listas */
-    margin: 20px auto;        /* centra las listas en la pantalla */
-  }
-
-  .lista-horizontal {
-    display: flex;
-    list-style: none;         /* quita numeración */
-    padding: 0;
-    margin: 0;
-    justify-content: center;  /* centra los items horizontalmente */
-    gap: 20px;
-  }
-</style>
-
+<!-- Contenedor de listas -->
 <div class="contenedor-listas">
-  <ol class="lista-horizontal">
-    <li>graduados</li>
-    <li>estuiantes </li>
-    <li>reingresos/li>
-    <li>sena</li>
-    <li>aplicativos</li>
+  <!-- Primera lista (color original) -->
+  <ul class="lista-horizontal">
+    <li>Graduados</li>
+    <li>Estudiantes</li>
+    <li>Conocimientos</li>
+    <li>Aplicativos</li>
     <li>Emisora</li>
-  </ol>
+  </ul>
 
-  <ol class="lista-horizontal">
-    <li>Tecnico</li>
-    <li>Tecnologo</li>
-    <li>Profesional</li>
-    
-  </ol>
+  <!-- Segunda lista con desplegable -->
+  <ul class="lista-horizontal lista-2">
+    <li class="dropdown">
+      Técnico
+      <ul class="submenu">
+        <li>Descripción del programa</li>
+        <li>Título</li>
+        <li>Tarifa</li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      Tecnólogo
+      <ul class="submenu">
+        <li>Descripción del programa</li>
+        <li>Título</li>
+        <li>Tarifa</li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      Profesional
+      <ul class="submenu">
+        <li>Descripción del programa</li>
+        <li>Título</li>
+        <li>Tarifa</li>
+      </ul>
+    </li>
+  </ul>
 </div>
 
-
-
-
-
+<!-- Banner -->
 <main>
   <div class="banner">
     <img src="ingsistemas.png" alt="Banner principal">
   </div>
 </main>
 
+<!-- Contenido de la página -->
+<h2>Página web</h2>
+<hr>
 
+<p>Ingeniería de Sistemas</p>
 
-  <script src="scripts/main.js"></script>
+<p id="demo">JavaScript</p>
 
- 
-  <h2>Página web</h2>  
+<button onclick="document.getElementById('demo').innerHTML = 'Esto se cambió con JavaScript';">
+  Clickea aquí
+</button>
 
-  <br>
-  <hr>
+<img src="Captura de pantalla 2025-10-16 212907.png" alt="Foto mía">
 
-  <p>ingenieria de sistemas</p>
+<p>Me siento muy ... <br> FELIZ</p>
+<p>- Todo lo puedes</p>
 
-  <p id="demo">javascript</p>
+<a href="https://www.facebook.com/jullieth.lozanohidalgo/">
+  https://www.facebook.com/jullieth.lozanohidalgo/
+</a>
 
-  <button onclick="document.getElementById('demo').innerHTML = 'Esto se cambió con JavaScript';">
-    Clickea aquí
-  </button>
+<!-- JavaScript para la lista desplegable -->
+<script src="scripts/main.js"></script>
+<script>
+  // Desplegable al hacer clic
+  const dropdowns = document.querySelectorAll('.dropdown');
 
-  <img src="Captura de pantalla 2025-10-16 212907.png" alt="foto mia">
+  dropdowns.forEach(dropdown => {
+    dropdown.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const submenu = dropdown.querySelector('.submenu');
 
-  <p>Me siento muy ... <br> FELIZ</p>
+      // Cierra otros submenus abiertos
+      dropdowns.forEach(d => {
+        if(d !== dropdown) {
+          const sm = d.querySelector('.submenu');
+          if(sm) sm.style.display = 'none';
+        }
+      });
 
-  <p>- Todo lo puedes</p>
+      // Alterna mostrar/ocultar el submenu
+      submenu.style.display = (submenu.style.display === 'block') ? 'none' : 'block';
+    });
+  });
 
-  <a href="https://www.facebook.com/jullieth.lozanohidalgo/">https://www.facebook.com/jullieth.lozanohidalgo/</a>  
+  // Cierra todos los submenus al hacer clic fuera
+  document.addEventListener('click', () => {
+    dropdowns.forEach(d => {
+      const submenu = d.querySelector('.submenu');
+      if(submenu) submenu.style.display = 'none';
+    });
+  });
+</script>
 
 </body>
 </html>

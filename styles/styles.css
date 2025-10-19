@@ -1,8 +1,3 @@
-
-img {
-  display: block;
-  margin: 50px auto;
-}
 /* Reset de body */
 body {
   margin: 0;
@@ -15,7 +10,7 @@ body {
 /* Header */
 header {
   display: flex;
-  justify-content: space-between; /* h1 a la izquierda, lista a la derecha */
+  justify-content: space-between; 
   align-items: center;
   padding: 10px 40px;
   background-color: #ffffff;
@@ -27,6 +22,13 @@ h2 {
   color: #f3f6f9;
   margin-bottom: 15px;
   text-align: center;
+}
+
+
+/* centrar contenedor de listas */
+.contenedor-listas {/* 1. Define un ancho para que el margen automático funcione */
+    width: 80%;  /* O el valor que necesites, por ejemplo: 500px */
+    margin: 0 auto;
 }
 
 /* Lista horizontal limpia */
@@ -42,37 +44,52 @@ h2 {
 
 .lista-horizontal li {
   font-size: 18px;
-  color: #da702e;
+  color: #ea49bf;
   font-weight: bold;
   transition: 0.3s;
-}
-
-.lista-horizontal li:hover {
-  background: none;
   cursor: pointer;
 }
 
-/* Banner que reemplaza el recuadro */
-.banner {
-  position: relative;          /* permite posicionar el texto sobre la imagen */
-  width: 100%;
-  max-height: 300px;           /* altura similar al recuadro anterior */
-  overflow: hidden;
-  margin: 40px 0;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.lista-horizontal li:hover {
+  color: #ff80c0; /* efecto hover */
 }
 
-.banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+/* Color de la segunda lista */
+.lista-2 li {
+  color: #d03772;
+  position: relative; /* necesario para posicionar submenus */
 }
 
-/* Texto superpuesto sobre el banner */
-.texto-banner {
+/* Submenu oculto por defecto */
+.submenu {
+  display: none;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50
+  top: 100%;       /* debajo del título */
+  left: 0;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 10px 0;
+  list-style: none;
+  min-width: 150px;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+/* Elementos del submenu */
+.submenu li {
+  padding: 5px 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+.submenu li:hover {
+  background-color: #e0e7ff;
+}
+
+/* Banner de imagen */
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 40px 0;
+}
