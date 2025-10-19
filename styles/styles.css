@@ -55,6 +55,16 @@ h2 {
   border-radius: 5px;
 }
 
+
+.lista-horizontal {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0; /* margen inferior de 10px */
+  gap: 15px; /* espacio entre los elementos de la lista */
+}
+
+
 /* 🔹 Recuadro con texto e imagen */
 .recuadro {
   display: flex;               /* Coloca texto e imagen en la misma línea */
