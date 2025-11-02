@@ -80,6 +80,108 @@
   <button type="submit">Enviar</button>
 </form>
 
+<div class="programas">
+<img src="tecnico.png" alt="Programa 1">
+<img src="Tecnologia.png" alt="Programa 2">
+<img src="profesional.png" alt="Programa 3">
+</div>
+
+<div class="programa-animado"></div>
+
+<div  class="furuture">
+  <h1>¡Conoce tu futuro académico!</h1>
+  <h3>Como profesional en Ingeniería de Software serás capaz de diseñar, desarrollar y asegurar la calidad de soluciones tecnológicas dominando todo el ciclo de vida del software con nuestro modelo por ciclos, obtén hasta tres titulaciones y elige entre dos rutas: Desarrollo o Calidad. Fortalece tu perfil con experiencia en proyectos reales, metodologías ágiles y certificaciones de la industria, manejando la gestión de los tiempos, recursos y equipos para destacar en el sector TI.
+Podrás crear apps móviles eficientes para plataformas Android e iOS y desarrollarás aplicaciones completas con enfoque Ful Stack (Frontend y Backend)</h3>
+
+
+<div class="contenedor2">
+  <iframe src="https://www.youtube.com/embed/4anzGxxz79Y"></iframe>
+
+</div>  
+</div>  
+
+<section class="seccion-carrusel">
+  <div class="galeria">
+    <button class="flecha izquierda" onclick="cambiar(-1)">&#10094;</button>
+    <img id="imagen" src="1.png" alt="Carrusel">
+    <button class="flecha derecha" onclick="cambiar(1)">&#10095;</button>
+  </div>
+  <p class="descripcion">Conoce más sobre nuestro programa de Ingeniería de Sistemas</p>
+</section>
+
+<script>
+  const imagenes = ["1.png", "2.png", "4.png"];
+  let indice = 0;
+
+  function cambiar(direccion) {
+    indice += direccion;
+    if (indice < 0) indice = imagenes.length - 1;
+    if (indice >= imagenes.length) indice = 0;
+
+    const img = document.getElementById("imagen");
+    img.style.opacity = 0;
+    setTimeout(() => {
+      img.src = imagenes[indice];
+      img.style.opacity = 1;
+    }, 300);
+  }
+</script>
+
+
+ 
+
+
+
+  <script>
+    const imagenes = [
+      "1.png",
+      "2.png",
+      "4.png",
+    ];
+
+     let indice = 0;
+
+  function cambiar(direccion) {
+    indice += direccion;
+    if (indice < 0) indice = imagenes.length - 1;
+    if (indice >= imagenes.length) indice = 0;
+
+    const img = document.getElementById("imagen");
+    img.style.opacity = 0;
+    setTimeout(() => {
+      img.src = imagenes[indice];
+      img.style.opacity = 1;
+    }, 300);
+  }
+</script>           
+
+
+  
+  </script>           
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="centro">
   <p>Estudiante <br>del programa</p>
   <p>Jullieth Lozano Hidalgo</p>

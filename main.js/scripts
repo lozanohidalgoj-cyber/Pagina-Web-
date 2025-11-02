@@ -1,28 +1,51 @@
-const dropdowns = document.querySelectorAll('.dropdown');
+document.addEventListener('DOMContentLoaded', () => {
+  // === MENÚ DESPLEGABLE ===
+  const dropdowns = document.querySelectorAll('.dropdown');
 
-dropdowns.forEach(dropdown => {
-  dropdown.addEventListener('click', function(e) {
-    e.stopPropagation();
-    const submenu = dropdown.querySelector('.submenu');
-    if (!submenu) return; // evita errores si no hay submenu
+  dropdowns.forEach(dropdown => {
+    dropdown.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const submenu = dropdown.querySelector('.submenu');
+      if (!submenu) return; // evita errores si no hay submenu
 
-    // Cierra otros submenus abiertos
-    dropdowns.forEach(d => {
-      if (d !== dropdown) {
-        const sm = d.querySelector('.submenu');
-        if (sm) sm.classList.remove('active');
-      }
+      // Cierra otros submenus abiertos
+      dropdowns.forEach(d => {
+        if (d !== dropdown) {
+          const sm = d.querySelector('.submenu');
+          if (sm) sm.classList.remove('active');
+        }
+      });
+
+      // Mostrar/ocultar el submenu
+      submenu.classList.toggle('active');
     });
-
-    // Mostrar/ocultar el submenu
-    submenu.classList.toggle('active');
   });
+
+  // Cierra todos los submenus al hacer clic fuera
+  document.addEventListener('click', () => {
+    dropdowns.forEach(d => {
+      const submenu = d.querySelector('.submenu');
+      if (submenu) submenu.classList.remove('active');
+    });
+  });
+
+  // === CAMBIO DE IMÁGENES ===
+  const imagenes = document.querySelectorAll('.programas img');
+  let indice = 0;
+  const contenedor = document.querySelector('.programas');
+
+  if (contenedor && imagenes.length > 0) {
+    contenedor.addEventListener('mouseenter', () => {
+      const cambio = setInterval(() => {
+        imagenes[indice].classList.remove('visible');
+        indice = (indice + 1) % imagenes.length;
+        imagenes[indice].classList.add('visible');
+      }, 800);
+
+      contenedor.addEventListener('mouseleave', () => {
+        clearInterval(cambio);
+      }, { once: true });
+    });
+  }
 });
 
-// Cierra todos los submenus al hacer clic fuera
-document.addEventListener('click', () => {
-  dropdowns.forEach(d => {
-    const submenu = d.querySelector('.submenu');
-    if (submenu) submenu.classList.remove('active');
-  });
-});

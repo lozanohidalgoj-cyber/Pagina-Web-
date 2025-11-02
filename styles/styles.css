@@ -217,3 +217,106 @@ img {
   font-weight: normal;   /* opcional: quitar negrita si no quieres */
   color: #333;           /* color del texto */
 }
+
+/*clase para programas */
+.programas {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* espacio entre las imágenes */
+  margin: 40px 0; /* espacio arriba y abajo */
+}
+
+.furuture {
+  width: 60%;
+  margin: 50px auto;
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+/* 🌸 Recuadro rosa */
+.recuadro-rosa {
+  background-color: #ffc0cb;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 30px;
+  width: 80%;
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+  position: relative;
+}
+
+/* 🌸 Sección completa del carrusel */
+.seccion-carrusel {
+  width: 100%;
+  background: linear-gradient(135deg, #ffd6e7 0%, #ffe6f2 100%);
+  padding: 60px 0;
+  text-align: center;
+  position: relative;
+}
+
+/* 🌸 Contenedor del carrusel */
+.galeria {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* 🌸 Imagen del carrusel */
+.galeria img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 1;
+}
+
+/* Efecto de aumento al pasar el cursor */
+.galeria img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 🌸 Flechas */
+.flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  color: #333;
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+
+.flecha:hover {
+  background-color: #fff;
+}
+
+.flecha.izquierda {
+  left: 15%;
+}
+
+.flecha.derecha {
+  right: 15%;
+}
+
+/* 🌸 Texto debajo del carrusel */
+.descripcion {
+  margin-top: 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+
